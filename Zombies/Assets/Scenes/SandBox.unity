@@ -2933,7 +2933,7 @@ PrefabInstance:
     - target: {fileID: 2006430363489927694, guid: 4f934b5d6bfd2be45bb156839bb0a232,
         type: 3}
       propertyPath: chaseRange
-      value: 19.69
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 2006430363489927700, guid: 4f934b5d6bfd2be45bb156839bb0a232,
         type: 3}
