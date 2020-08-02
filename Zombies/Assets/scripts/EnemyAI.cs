@@ -19,11 +19,7 @@ public class EnemyAI : MonoBehaviour
         navMeshAgent = GetComponent<NavMeshAgent>();
 
     }
-    void OnDrawGizmosSelected()
-    {
-        Gizmos.color =  Color.red;
-        Gizmos.DrawWireSphere(transform.position, chaseRange);
-    }
+    
 
     void Update()
     {
@@ -41,26 +37,32 @@ public class EnemyAI : MonoBehaviour
 
     private void EngageTarget()
     {
-        if (distanceToTarget >=navMeshAgent.stoppingDistance)
+        if (distanceToTarget >= navMeshAgent.stoppingDistance)
         {
             ChaseTarget();
         }
 
-        if (distanceToTarget < navMeshAgent.stoppingDistance)
+        if (distanceToTarget <= navMeshAgent.stoppingDistance)
         {
 
             AttackTarget();
         }
 
     }
-
-    private void AttackTarget()
-    {
-        Debug.Log(name + " esta atacando a " + target.name ) ;
-    }
+      
 
     private void ChaseTarget()
     {
         navMeshAgent.SetDestination(target.position);
+    }
+    private void AttackTarget()
+    {
+        Debug.Log(name + " esta atacando a " + target.name);
+    }
+
+    void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, chaseRange);
     }
 }
