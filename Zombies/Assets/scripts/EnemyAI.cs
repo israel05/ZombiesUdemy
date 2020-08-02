@@ -19,21 +19,22 @@ public class EnemyAI : MonoBehaviour
         navMeshAgent = GetComponent<NavMeshAgent>();
 
     }
-
+    void OnDrawGizmosSelected()
+    {
+        Gizmos.color =  Color.red;
+        Gizmos.DrawWireSphere(transform.position, chaseRange);
+    }
 
     void Update()
     {
         distanceToTarget = Vector3.Distance(target.position, transform.position);
         
-        if (distanceToTarget < chaseRange)
+        if (distanceToTarget <= chaseRange)
         {
             navMeshAgent.SetDestination(target.position);
         }     else
         {
             print("Ya no te sigo");
-        }
-            
-     
-    
+        }  
     }
 }
