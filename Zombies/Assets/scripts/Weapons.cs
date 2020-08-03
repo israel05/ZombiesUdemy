@@ -8,7 +8,7 @@ public class Weapons : MonoBehaviour
     [SerializeField] Camera FPCamera;
     [SerializeField] float range = 100f;
     [SerializeField] ParticleSystem projectileParticle;
-
+    [SerializeField] float damage = 24f;
     void Update()
     {
         if (Input.GetButtonDown("Fire1"))
@@ -24,7 +24,8 @@ public class Weapons : MonoBehaviour
         {
             print("He alcanzado: " + hit.transform.name);
             EnemyHealth target = hit.transform.GetComponent<EnemyHealth>();
-            target.takeDamage(25);
+            if (target == null) return; 
+            target.takeDamage(damage);
         }
        else
         {

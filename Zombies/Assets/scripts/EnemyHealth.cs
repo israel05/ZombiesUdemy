@@ -8,7 +8,9 @@ public class EnemyHealth : MonoBehaviour
 
     [SerializeField] float  hitPoints = 10f;
     [SerializeField] Collider collisionMesh;
-
+    AudioSource myAudioSource;
+    [SerializeField] AudioClip enemyHitSFX;
+    [SerializeField] AudioClip enemyDeathSFX;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,12 +29,14 @@ public class EnemyHealth : MonoBehaviour
     public void takeDamage(float damage)
     {
         hitPoints -= damage;
+        AudioSource.PlayClipAtPoint(enemyHitSFX, Camera.main.transform.position);
         print("AGHH ME QUEDA " + hitPoints + " DE VIDA");
     }
 
         
     private void KillEnemy()
     {
+        AudioSource.PlayClipAtPoint(enemyDeathSFX, Camera.main.transform.position);
         Destroy(gameObject);
     }
 
