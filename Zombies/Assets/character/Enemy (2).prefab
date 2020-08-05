@@ -27,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3739043051992371032}
   m_LocalRotation: {x: 0.50416946, y: 0.52265257, z: 0.4948017, w: 0.4773036}
-  m_LocalPosition: {x: -0.043, y: 0.688, z: 0.743}
+  m_LocalPosition: {x: -0.039, y: 0.688, z: 0.808}
   m_LocalScale: {x: 0.16825499, y: 0.35975105, z: 0.17643873}
   m_Children: []
   m_Father: {fileID: 7981432583482588933}
@@ -112,6 +112,7 @@ GameObject:
   - component: {fileID: 8081646963307314712}
   - component: {fileID: 8438614773634238540}
   - component: {fileID: 2055061666264030046}
+  - component: {fileID: 7691791625305724211}
   m_Layer: 0
   m_Name: Enemy (2)
   m_TagString: Untagged
@@ -128,7 +129,7 @@ Transform:
   m_GameObject: {fileID: 7981432583482588952}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 3.5, z: -5.252}
-  m_LocalScale: {x: 1.6957, y: 2.7797, z: 2.179}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2480985070383593478}
   m_Father: {fileID: 0}
@@ -209,7 +210,7 @@ NavMeshAgent:
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
-  m_StoppingDistance: 1
+  m_StoppingDistance: 2
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -376,3 +377,17 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &7691791625305724211
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7981432583482588952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c5da6e83b35f3a4a8326855cc37bb31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  damage: 40
