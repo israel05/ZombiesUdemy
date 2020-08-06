@@ -6,13 +6,14 @@ using UnityEngine.UIElements;
 
 public class SceneLoader : MonoBehaviour
 {
-    [SerializeField]  Button playAgainButton;
-    [SerializeField] Button quitButton;
+    
 
 
     public void reloadGame()
     {
         SceneManager.LoadScene(0); //vuelve a cargar el mismo nivel
+
+        Time.timeScale = 1; //detiene el tiempo del juego.    
     }
 
     public void salirJuego()

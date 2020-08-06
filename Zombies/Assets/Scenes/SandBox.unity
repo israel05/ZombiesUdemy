@@ -3053,28 +3053,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1796014312}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1807348302 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2594424459620834497, guid: b95a3b4234fc7e646b4730252767ba44,
-    type: 3}
-  m_PrefabInstance: {fileID: 2594424459569621662}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1807348304
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1807348302}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ebcd2b1783849a042a15d4ecc3ca0a19, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hitPoints: 10
-  collisionMesh: {fileID: 0}
-  playerHitSFX: {fileID: 0}
-  playerDeathSFX: {fileID: 0}
 --- !u!1 &1840353092
 GameObject:
   m_ObjectHideFlags: 0
@@ -4193,5 +4171,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7929821180383134408, guid: b95a3b4234fc7e646b4730252767ba44,
+        type: 3}
+      propertyPath: gameOverCanvas
+      value: 
+      objectReference: {fileID: 2019466973}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b95a3b4234fc7e646b4730252767ba44, type: 3}
