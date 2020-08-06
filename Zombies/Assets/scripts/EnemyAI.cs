@@ -36,6 +36,13 @@ public class EnemyAI : MonoBehaviour
         }            
     }
 
+    /// <summary>
+    /// Es para que si le disparan se de por alertado
+    /// </summary>
+    public void OnDamageTaken()
+    {
+        isProvoked = true;
+    }
     private void EngageTarget()
     {
         FaceTarget();

@@ -107,12 +107,12 @@ GameObject:
   - component: {fileID: 7981432583482588935}
   - component: {fileID: 7981432583482588934}
   - component: {fileID: 7981432583482588953}
-  - component: {fileID: 7981432583482588930}
-  - component: {fileID: 8058366743567190833}
   - component: {fileID: 8081646963307314712}
   - component: {fileID: 8438614773634238540}
   - component: {fileID: 2055061666264030046}
+  - component: {fileID: 7981432583482588930}
   - component: {fileID: 7691791625305724211}
+  - component: {fileID: 8058366743567190833}
   m_Layer: 0
   m_Name: Enemy (2)
   m_TagString: Untagged
@@ -218,36 +218,6 @@ NavMeshAgent:
   m_BaseOffset: 1
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &7981432583482588930
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7981432583482588952}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a27e4567d0884f4aa1c2e0553a28b1d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 0}
-  chaseRange: 25
---- !u!114 &8058366743567190833
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7981432583482588952}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f55f803599563644094ac147629f0eb4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hitPoints: 100
-  collisionMesh: {fileID: 8081646963307314712}
-  enemyHitSFX: {fileID: 8300000, guid: 0779fe52358d51246af92a75902c8f47, type: 3}
-  enemyDeathSFX: {fileID: 8300000, guid: e64a4ff6b6ebdfa459cae4a48fee6e92, type: 3}
 --- !u!64 &8081646963307314712
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -377,6 +347,21 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &7981432583482588930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7981432583482588952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a27e4567d0884f4aa1c2e0553a28b1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  chaseRange: 50
+  turnSpeed: 10
 --- !u!114 &7691791625305724211
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -389,5 +374,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c5da6e83b35f3a4a8326855cc37bb31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
-  damage: 40
+  damage: 10
+--- !u!114 &8058366743567190833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7981432583482588952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f55f803599563644094ac147629f0eb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitPoints: 100
+  collisionMesh: {fileID: 8081646963307314712}
+  enemyHitSFX: {fileID: 8300000, guid: 0779fe52358d51246af92a75902c8f47, type: 3}
+  enemyDeathSFX: {fileID: 8300000, guid: e64a4ff6b6ebdfa459cae4a48fee6e92, type: 3}

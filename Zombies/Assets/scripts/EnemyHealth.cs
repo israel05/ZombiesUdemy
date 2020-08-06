@@ -28,6 +28,7 @@ public class EnemyHealth : MonoBehaviour
 
     public void takeDamage(float damage)
     {
+        BroadcastMessage("OnDamageTaken"); //llama a todas las que tengan esa funcion
         hitPoints -= damage;
         AudioSource.PlayClipAtPoint(enemyHitSFX, Camera.main.transform.position);
         print("AGHH ME QUEDA " + hitPoints + " DE VIDA");

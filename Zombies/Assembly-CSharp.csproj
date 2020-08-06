@@ -63,6 +63,33 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Mtree\Scripts\AO\DensityAO.cs" />
+    <Compile Include="Assets\Mtree\Scripts\AO\KDTree.cs" />
+    <Compile Include="Assets\Mtree\Scripts\AO\WeightedRandom.cs" />
+    <Compile Include="Assets\Mtree\Scripts\Bezier\Bezier.cs" />
+    <Compile Include="Assets\Mtree\Scripts\Bezier\MtreeBezier.cs" />
+    <Compile Include="Assets\Mtree\Scripts\ExampleSceneManager.cs" />
+    <Compile Include="Assets\Mtree\Scripts\LODValues.cs" />
+    <Compile Include="Assets\Mtree\Scripts\LeafPoint.cs" />
+    <Compile Include="Assets\Mtree\Scripts\MTree.cs" />
+    <Compile Include="Assets\Mtree\Scripts\MtreeComponent.cs" />
+    <Compile Include="Assets\Mtree\Scripts\MtreeVariables.cs" />
+    <Compile Include="Assets\Mtree\Scripts\MtreeWind.cs" />
+    <Compile Include="Assets\Mtree\Scripts\Node.cs" />
+    <Compile Include="Assets\Mtree\Scripts\SimplexNoise.cs" />
+    <Compile Include="Assets\Mtree\Scripts\Splines.cs" />
+    <Compile Include="Assets\Mtree\Scripts\TreeBilboard.cs" />
+    <Compile Include="Assets\Mtree\Scripts\TreeFunctions.cs" />
+    <Compile Include="Assets\Mtree\Scripts\TreeFunctions\BranchFunction.cs" />
+    <Compile Include="Assets\Mtree\Scripts\TreeFunctions\GrowFunction.cs" />
+    <Compile Include="Assets\Mtree\Scripts\TreeFunctions\LeafFunction.cs" />
+    <Compile Include="Assets\Mtree\Scripts\TreeFunctions\SplitFunction.cs" />
+    <Compile Include="Assets\Mtree\Scripts\TreeFunctions\TreeFunctionAsset.cs" />
+    <Compile Include="Assets\Mtree\Scripts\TreeFunctions\TrunkFunction.cs" />
+    <Compile Include="Assets\Mtree\Scripts\TreePoint.cs" />
+    <Compile Include="Assets\Mtree\Scripts\TreeTemplate.cs" />
+    <Compile Include="Assets\Mtree\Scripts\Utils.cs" />
+    <Compile Include="Assets\Mtree\Scripts\VSProIntegration.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
@@ -105,26 +132,38 @@
     <Compile Include="Assets\scripts\Weapons.cs" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />
+    <None Include="Assets\Mtree\Shaders\BranchEditor\BranchEditorBark.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap.shader" />
     <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Oswald-Bold - OFL.txt" />
+    <None Include="Assets\Mtree\Shaders\BranchEditor\BranchEditorEnhancedNormal.shader" />
     <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Anton OFL.txt" />
+    <None Include="Assets\Mtree\Shaders\Legacy\Bark.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
+    <None Include="Assets\Mtree\Shaders\Legacy\Leafs.shader" />
+    <None Include="Assets\Mtree\Shaders\Legacy\BETA_Leafs Outline.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface.shader" />
     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
+    <None Include="Assets\Mtree\Shaders\Legacy\Vertex Color Shader.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
+    <None Include="Assets\Mtree\Shaders\BranchEditor\BranchEditorLeafs.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Surface.cginc" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Masking.shader" />
+    <None Include="Assets\Mtree\Shaders\Legacy\BETA_Bark Outline.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF Overlay.shader" />
+    <None Include="Assets\Mtree\3rd Party Licenses.txt" />
+    <None Include="Assets\Mtree\Shaders\Legacy\LeafsDeferred.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile.shader" />
     <None Include="Assets\Asset Packs\Survival Carbine\Thanks To Michael.txt" />
+    <None Include="Assets\Mtree\Shaders\Legacy\Billboard.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Sprite.shader" />
     <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Bangers - OFL.txt" />
+    <None Include="Assets\Mtree\Shaders\BranchEditor\Normal.shader" />
     <Reference Include="UnityEngine">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.5f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
