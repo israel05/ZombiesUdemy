@@ -16,6 +16,7 @@ public class DeathHandler : MonoBehaviour
     {
         gameOverCanvas.enabled = true;
         Time.timeScale = 0; //detiene el tiempo del juego.
+        FindObjectOfType<WeaponsSwitcher>().enabled = false; //que no pueda cambiar de arma si ha muerto
         Cursor.lockState = CursorLockMode.None; // libera el raton para poder usar el boton
         Cursor.visible = true;
     }

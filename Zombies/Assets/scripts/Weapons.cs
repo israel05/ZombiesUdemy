@@ -13,30 +13,42 @@ public class Weapons : MonoBehaviour
     [SerializeField] ParticleSystem mozzleFlash;
     [SerializeField] GameObject hitEffect;
     [SerializeField] Ammo ammoSlot; //cantida de balas ahora
-   
+    [SerializeField] AmmoType ammoType;
+
     bool canShoot = true;
-    
+
+
+    private void OnEnable()
+    {
+        canShoot = true;
+    }
+
     void Update()
     {
+
         if (Input.GetMouseButtonDown(0) && canShoot == true)
         {
               StartCoroutine(Shoot());           
         }     
+    
     }
 
+    
      IEnumerator Shoot()
-    {
-        canShoot = false;
-        if (ammoSlot.GetAmmoAmmount() > 0)
         {
-            PlayMyzzleFlash();
-            ProcessRayCast();
-            ammoSlot.DecreaseAmmoAmmount();
-        }       
-        yield return new WaitForSeconds(timeBetweenSHots);
-        canShoot = true;
-    }
-
+            canShoot = false;
+            if (ammoSlot.getammoammount(ammoType) > 0)
+            {
+                PlayMyzzleFlash();
+                ProcessRayCast();
+                ammoSlot.decreaseammoammount(ammoType);
+            }       
+            yield return new WaitForSeconds(timeBetweenSHots);
+            canShoot = true;
+        }
+    
+        
+   
     private void PlayMyzzleFlash()
     {
         mozzleFlash.Play();
