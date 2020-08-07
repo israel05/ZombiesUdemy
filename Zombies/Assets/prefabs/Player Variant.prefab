@@ -4770,6 +4770,21 @@ MonoBehaviour:
   collisionMesh: {fileID: 0}
   playerHitSFX: {fileID: 0}
   playerDeathSFX: {fileID: 0}
+--- !u!114 &520494396616128586
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2594424459620834497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb04b497534861a49b55a7d28ba720e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fpsCamera: {fileID: 2594424459621818087}
+  zoomedOutFOV: 49
+  zoomedInFOV: 26
 --- !u!114 &7929821180383134408
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4782,6 +4797,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ef6603e586401345a1914f7c63b1c18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameOverCanvas: {fileID: 0}
 --- !u!1001 &2594424459620866663
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4791,7 +4807,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100006, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
       propertyPath: m_Name
-      value: Player
+      value: Player Variant
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
       propertyPath: m_LocalPosition.x
