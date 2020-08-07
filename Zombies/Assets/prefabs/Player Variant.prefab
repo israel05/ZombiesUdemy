@@ -4770,23 +4770,6 @@ MonoBehaviour:
   collisionMesh: {fileID: 0}
   playerHitSFX: {fileID: 0}
   playerDeathSFX: {fileID: 0}
---- !u!114 &520494396616128586
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2594424459620834497}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bb04b497534861a49b55a7d28ba720e8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fpsCamera: {fileID: 2594424459621818087}
-  zoomedOutFOV: 49
-  zoomedInFOV: 26
-  mouseSensitivityZoomIn: 2
-  mouseSensitivityZoomOut: 0.5
 --- !u!114 &7929821180383134408
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4911,6 +4894,11 @@ PrefabInstance:
     - target: {fileID: 6233294171931536385, guid: c6453f8e1f814744d8b94e5a6d1f9942,
         type: 3}
       propertyPath: FPCamera
+      value: 
+      objectReference: {fileID: 2594424459621818087}
+    - target: {fileID: 6943669103185013868, guid: c6453f8e1f814744d8b94e5a6d1f9942,
+        type: 3}
+      propertyPath: fpsCamera
       value: 
       objectReference: {fileID: 2594424459621818087}
     - target: {fileID: 7795405150450956093, guid: c6453f8e1f814744d8b94e5a6d1f9942,

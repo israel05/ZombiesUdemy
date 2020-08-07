@@ -1,5 +1,22 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &4545377522666862417
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2337074158997199750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb04b497534861a49b55a7d28ba720e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fpsCamera: {fileID: 0}
+  zoomedOutFOV: 60
+  zoomedInFOV: 20
+  mouseSensitivityZoomIn: 2
+  mouseSensitivityZoomOut: 0.5
 --- !u!1001 &8679958539925475152
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -69,3 +86,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c63fc95f1c763c349a4b302366707d0e, type: 3}
+--- !u!1 &2337074158997199750 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6348840572872398038, guid: c63fc95f1c763c349a4b302366707d0e,
+    type: 3}
+  m_PrefabInstance: {fileID: 8679958539925475152}
+  m_PrefabAsset: {fileID: 0}
