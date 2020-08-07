@@ -4785,6 +4785,8 @@ MonoBehaviour:
   fpsCamera: {fileID: 2594424459621818087}
   zoomedOutFOV: 49
   zoomedInFOV: 26
+  mouseSensitivityZoomIn: 2
+  mouseSensitivityZoomOut: 0.5
 --- !u!114 &7929821180383134408
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4798,6 +4800,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameOverCanvas: {fileID: 0}
+--- !u!114 &8507634426662496681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2594424459620834497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4eefb400202bcb44d98cf1a6a3c1d11e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ammoAmount: 10
 --- !u!1001 &2594424459620866663
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4873,6 +4888,11 @@ PrefabInstance:
       propertyPath: hitEffect
       value: 
       objectReference: {fileID: 100010, guid: b9b1ee4a5aaa8ca4aa04af46b563efa1, type: 3}
+    - target: {fileID: 3240650826771836258, guid: c6453f8e1f814744d8b94e5a6d1f9942,
+        type: 3}
+      propertyPath: ammoSlot
+      value: 
+      objectReference: {fileID: 8507634426662496681}
     - target: {fileID: 4293519928643495105, guid: c6453f8e1f814744d8b94e5a6d1f9942,
         type: 3}
       propertyPath: m_RootOrder
@@ -4888,6 +4908,16 @@ PrefabInstance:
       propertyPath: ShapeModule.m_Texture
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 6233294171931536385, guid: c6453f8e1f814744d8b94e5a6d1f9942,
+        type: 3}
+      propertyPath: FPCamera
+      value: 
+      objectReference: {fileID: 2594424459621818087}
+    - target: {fileID: 7795405150450956093, guid: c6453f8e1f814744d8b94e5a6d1f9942,
+        type: 3}
+      propertyPath: FPCamera
+      value: 
+      objectReference: {fileID: 2594424459621818087}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
 --- !u!1 &2594424459620834497 stripped
