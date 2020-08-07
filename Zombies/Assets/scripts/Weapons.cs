@@ -7,31 +7,34 @@ public class Weapons : MonoBehaviour
 {
     [SerializeField] Camera FPCamera;
     [SerializeField] float range = 100f;
-   
+    [SerializeField] float timeBetweenSHots = 0;
     [SerializeField] float damage = 24f;
+   // [SerializeField] float delay = 2f;
     [SerializeField] ParticleSystem mozzleFlash;
     [SerializeField] GameObject hitEffect;
     [SerializeField] Ammo ammoSlot; //cantida de balas ahora
-
+   
+    bool canShoot = true;
+    
     void Update()
     {
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetMouseButtonDown(0) && canShoot == true)
         {
-            if (ammoSlot.GetAmmoAmmount() > 0)
-            {
-                Shoot();
-               
-            }
-
+              StartCoroutine(Shoot());           
         }     
     }
 
-    private void Shoot()
+     IEnumerator Shoot()
     {
-        PlayMyzzleFlash();
-        ProcessRayCast();
-        ammoSlot.DecreaseAmmoAmmount();
-
+        canShoot = false;
+        if (ammoSlot.GetAmmoAmmount() > 0)
+        {
+            PlayMyzzleFlash();
+            ProcessRayCast();
+            ammoSlot.DecreaseAmmoAmmount();
+        }       
+        yield return new WaitForSeconds(timeBetweenSHots);
+        canShoot = true;
     }
 
     private void PlayMyzzleFlash()
@@ -48,10 +51,8 @@ public class Weapons : MonoBehaviour
 
             CreateHitImpact(hit);
             EnemyHealth target = hit.transform.GetComponent<EnemyHealth>();
-            if (target == null) return;
-            
+            if (target == null) return;            
             target.takeDamage(damage);
-
         }
         else
         {
@@ -62,7 +63,6 @@ public class Weapons : MonoBehaviour
     private void CreateHitImpact(RaycastHit hit)
     {
         GameObject impact=Instantiate(hitEffect, hit.point, Quaternion.LookRotation(hit.normal));
-        Destroy(impact, 1);
-       
+        Destroy(impact, 1);       
     }
 }

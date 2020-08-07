@@ -6,6 +6,7 @@ using UnityStandardAssets.Characters.FirstPerson;
 public class WeaponsZoom : MonoBehaviour
 {
     [SerializeField] Camera fpsCamera;
+    [SerializeField] RigidbodyFirstPersonController fpsController;
     [SerializeField] float zoomedOutFOV = 60f;
     [SerializeField] float zoomedInFOV = 20f;
     [SerializeField] float mouseSensitivityZoomIn = 2f; //para cambiar el inputManager
@@ -13,13 +14,15 @@ public class WeaponsZoom : MonoBehaviour
 
     bool zoomedInToggle = false;
 
-    RigidbodyFirstPersonController fpsController;
+  
 
+    /*
     private void Start()
     {
-        fpsController = GetComponent<RigidbodyFirstPersonController>();
+        //fpsController = GetComponent<RigidbodyFirstPersonController>(); busca en hijos y en si mismio
+        fpsController = GetComponentInParent<RigidbodyFirstPersonController>();
     }
-
+    */
     private void Update()
     {
         if (Input.GetMouseButtonDown(1)) //boton derecho
