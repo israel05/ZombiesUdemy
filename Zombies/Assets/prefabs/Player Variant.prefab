@@ -4796,6 +4796,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ammoAmount: 10
+--- !u!114 &2208965388254131516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5948794910100617000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7c8359a33dcdfc48bc6d20da219436e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentWeapon: 0
 --- !u!1001 &2594424459620866663
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4849,6 +4862,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2977869681140030593, guid: c6453f8e1f814744d8b94e5a6d1f9942,
+        type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3240650826771836258, guid: c6453f8e1f814744d8b94e5a6d1f9942,
@@ -4934,6 +4952,12 @@ MonoBehaviour:
 --- !u!20 &2594424459621818087 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 2000000, guid: c6453f8e1f814744d8b94e5a6d1f9942,
+    type: 3}
+  m_PrefabInstance: {fileID: 2594424459620866663}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5948794910100617000 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8543155041848765775, guid: c6453f8e1f814744d8b94e5a6d1f9942,
     type: 3}
   m_PrefabInstance: {fileID: 2594424459620866663}
   m_PrefabAsset: {fileID: 0}
