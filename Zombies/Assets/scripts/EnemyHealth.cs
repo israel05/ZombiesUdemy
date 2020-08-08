@@ -1,44 +1,33 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 public class EnemyHealth : MonoBehaviour
 {
+    [SerializeField] float hitPoints = 100f;
 
-    [SerializeField] float  hitPoints = 10f;
-    [SerializeField] Collider collisionMesh;
-    AudioSource myAudioSource;
-    [SerializeField] AudioClip enemyHitSFX;
-    [SerializeField] AudioClip enemyDeathSFX;
-    // Start is called before the first frame update
-    void Start()
+    bool isDead = false;
+
+    public bool IsDead()
     {
-        
+        return isDead;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void TakeDamage(float damage)
     {
+        BroadcastMessage("OnDamageTaken");
+        hitPoints -= damage;
         if (hitPoints <= 0)
         {
-            KillEnemy();
+         //   Destroy(gameObject);
+            Die();
         }
     }
 
-    public void takeDamage(float damage)
+    private void Die()
     {
-        BroadcastMessage("OnDamageTaken"); //llama a todas las que tengan esa funcion
-        hitPoints -= damage;
-        AudioSource.PlayClipAtPoint(enemyHitSFX, Camera.main.transform.position);
-        print("AGHH ME QUEDA " + hitPoints + " DE VIDA");
+        if (isDead) return;
+        isDead = true;
+        print("ENTRO EN LA ANIMACION DE MUERTO");
+        GetComponent<Animator>().SetTrigger("die");
     }
-
-        
-    private void KillEnemy()
-    {
-        AudioSource.PlayClipAtPoint(enemyDeathSFX, Camera.main.transform.position);
-        Destroy(gameObject);
-    }
-
 }

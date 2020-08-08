@@ -66,7 +66,7 @@ public class Weapons : MonoBehaviour
             CreateHitImpact(hit);
             EnemyHealth target = hit.transform.GetComponent<EnemyHealth>();
             if (target == null) return;            
-            target.takeDamage(damage);
+            target.TakeDamage(damage);
         }
         else
         {

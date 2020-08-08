@@ -1,29 +1,30 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.AI;
-
 public class EnemyAI : MonoBehaviour
 {
-
     [SerializeField] Transform target;
     [SerializeField] float chaseRange = 5f;
-    [SerializeField] float turnSpeed = 2f;
+    [SerializeField] float turnSpeed = 5f;
     NavMeshAgent navMeshAgent;
-    bool isProvoked = false;
-    
     float distanceToTarget = Mathf.Infinity;
+    bool isProvoked = false;
+    EnemyHealth health;
+
     void Start()
     {
         navMeshAgent = GetComponent<NavMeshAgent>();
-
+        health = GetComponent<EnemyHealth>();
     }
-    
 
     void Update()
     {
+        if (health.IsDead())
+        {
+            enabled = false;
+            navMeshAgent.enabled = false;
+        }
         distanceToTarget = Vector3.Distance(target.position, transform.position);
         if (isProvoked)
         {
@@ -32,13 +33,8 @@ public class EnemyAI : MonoBehaviour
         else if (distanceToTarget <= chaseRange)
         {
             isProvoked = true;
-            
-        }            
+        }
     }
-
-    /// <summary>
-    /// Es para que si le disparan se de por alertado
-    /// </summary>
     public void OnDamageTaken()
     {
         isProvoked = true;
@@ -50,42 +46,27 @@ public class EnemyAI : MonoBehaviour
         {
             ChaseTarget();
         }
-
-        if (distanceToTarget < navMeshAgent.stoppingDistance)
+        if (distanceToTarget <= navMeshAgent.stoppingDistance)
         {
-
             AttackTarget();
         }
-
     }
-      
-
     private void ChaseTarget()
     {
-        GetComponent<Animator>().SetBool("attack", false); //entra en la animacion attack
-        GetComponent<Animator>().SetTrigger("move"); //entra en la animacion move
+        GetComponent<Animator>().SetBool("attack", false);
+        GetComponent<Animator>().SetTrigger("move");
         navMeshAgent.SetDestination(target.position);
     }
     private void AttackTarget()
     {
-        GetComponent<Animator>().SetBool("attack", true); //entra en la animacion attack
-        //if (GetComponent<Animator>().GetBool("attack"))
-        //{
-        //    print("LANZO ANIMACION ATTACK");
-       // }
         GetComponent<Animator>().SetBool("attack", true);
-        Debug.Log(name + " esta atacando a " + target.name);
     }
-
     private void FaceTarget()
     {
         Vector3 direction = (target.position - transform.position).normalized;
         Quaternion lookRotation = Quaternion.LookRotation(new Vector3(direction.x, 0, direction.z));
         transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * turnSpeed);
     }
-
-
-
     void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
