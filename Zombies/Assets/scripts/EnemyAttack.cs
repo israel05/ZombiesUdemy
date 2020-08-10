@@ -19,8 +19,9 @@ public class EnemyAttack : MonoBehaviour
 
     public void AttackHitEvent()
     {
+
         if (target == null) return;
         target.takeDamage(damage);
-        print("BANG; BANG; MUERE TU MÁS PLAYER");
+        target.GetComponent<DisplayDamage>().ShowDamageImpact();
     }
 }

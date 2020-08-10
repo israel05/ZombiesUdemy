@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class Weapons : MonoBehaviour
@@ -15,6 +16,8 @@ public class Weapons : MonoBehaviour
     [SerializeField] Ammo ammoSlot; //cantida de balas ahora
     [SerializeField] AmmoType ammoType;
 
+    [SerializeField] TextMeshProUGUI ammoText;
+
     bool canShoot = true;
 
 
@@ -28,6 +31,8 @@ public class Weapons : MonoBehaviour
     void Update()
     {
 
+        DisplayAmmo();
+
         if (Input.GetMouseButtonDown(0) && canShoot == true)
         {
               StartCoroutine(Shoot());           
@@ -35,8 +40,13 @@ public class Weapons : MonoBehaviour
     
     }
 
-    
-     IEnumerator Shoot()
+    private void DisplayAmmo()
+    {
+        int currentAmmo = ammoSlot.getammoammount(ammoType);
+        ammoText.text = currentAmmo.ToString();
+    }
+
+    IEnumerator Shoot()
         {
             canShoot = false;
             if (ammoSlot.getammoammount(ammoType) > 0)
